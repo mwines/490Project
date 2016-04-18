@@ -1,0 +1,32 @@
+<%= render 'layouts/vheader' %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%= link_to 'New Document', new_document_path %>
+      <table class="table">
+        <thead>
+    <tr>
+      <th>Image</th>
+      <th>Filename</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @documents.each do |document| %>
+      <tr>
+        <% @directory = "public/images/upload/" + document.filename %>
+        <td><%= image_tag(document.filename, :size => "80x80", :alt => "Picture", :width => '100', :height => '100') %></td>
+        <td><%= document.filename %></td>
+        <td><%= button_to 'Download', document, method: :get %></td>
+        <td><%= button_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  </tbody>
+  <% end %>
+        </table>
+      </table>
+    </div>
+  </div>
+</div>
+
+<br>

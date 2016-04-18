@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%= render 'layouts/header' %>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">About
+                        <strong>A SafeFurr Place</strong>
+                    </h2>
+                    <hr>
+                </div>
+                <div class="col-md-6">
+                    <%= image_tag("logo.png", :class => "img-responsive img-left") %>
+                </div>
+                <div class="col-md-6">
+                    <p>We rescue animals from members of the community in need, off the streets and from high kill shelters in the Kern County area. We are a 100% volunteer-ran organization meaning nobody makes a dime besides our animals! We are also a "foster-based" rescue; which means all of our adoptable pets are placed in temporary foster homes until they find their forever homes! One day we dream of having the property to have a bigger facility where we will run our "pack-style" rescue where no animals will be held in kennel runs or cages; they will all live happily balanced lives and will be able to coexist problem-free!</p>
+                    <p>Our mission is to rescue, rehabilitate, and re-home animals in need in the area of Kern County; as well as educate our local community about the pet overpopulation problem and assist them in becoming responsible pet owners.</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">Our
+                        <strong>Team</strong>
+                    </h2>
+                    <hr>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                    <h3>John Smith
+                        <small>Job Title</small>
+                    </h3>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                    <h3>John Smith
+                        <small>Job Title</small>
+                    </h3>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                    <h3>John Smith
+                        <small>Job Title</small>
+                    </h3>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <%= render 'layouts/footer' %>
+
+    <!-- jQuery -->
+    <%= javascript_include_tag "jquery" %>
+
+    <!-- Bootstrap Core JavaScript -->
+    <%= javascript_include_tag "bootstrap.min" %>
+
+</body>
+
+</html>

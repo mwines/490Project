@@ -1,0 +1,27 @@
+<%= render 'layouts/vheader' %>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%= link_to 'New', new_uploads_path %>
+      <table class="table">
+          <tbody>
+            <tr>
+              <th colspan="2"></th>
+
+         
+          <% @upload.each do |upload| %>
+            </tr>
+          
+            <tr>
+              <td><%= upload.name %></td>
+            </tr>
+          </tbody>
+          <% end %>
+        </table>
+      </table>
+    </div>
+  </div>
+
+</div>

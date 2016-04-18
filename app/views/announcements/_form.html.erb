@@ -1,0 +1,31 @@
+<%= form_for @announcement do |f| %>
+ 
+  <% if @announcement.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@announcement.errors.count, "error") %> prohibited
+        this announcement from being saved:
+      </h2>
+      <ul>
+        <% @announcement.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title, :size => "91x10" %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text, :size => "90x10" %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
